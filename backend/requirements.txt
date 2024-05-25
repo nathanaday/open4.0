@@ -1,0 +1,7 @@
+fastapi
+pyjwt
+passlib
+python-jose
+uvicorn
+python-dotenv
+cryptography
