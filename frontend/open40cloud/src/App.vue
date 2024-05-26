@@ -1,9 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-h-screen flex flex-col items-center justify-center bg-light-gradient dark:bg-dark-gradient">
     <ExampleComponent />
   </div>
 </template>
-
 <script>
 import ExampleComponent from './components/ExampleComponent.vue';
 
