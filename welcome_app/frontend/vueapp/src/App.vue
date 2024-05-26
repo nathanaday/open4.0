@@ -1,15 +1,13 @@
 <template>
   <div id="app" class="min-h-screen flex flex-col items-center justify-center bg-light-gradient dark:bg-dark-gradient">
-    <ExampleComponent />
+    <router-view />
   </div>
 </template>
 <script>
-import ExampleComponent from './components/ExampleComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    ExampleComponent,
   },
 };
 </script>
