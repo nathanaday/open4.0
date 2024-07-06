@@ -40,7 +40,7 @@ import githubLogo from '../assets/icon-github-mark.svg';
 import mdiArrowRight from '../assets/icon-mdi-arrow-right-drop-circle-outline.svg';
 
 export default {
-    name: 'ExampleComponent',
+    name: 'WelcomeComponent',
     data() {
         return {
             githubLogo,
@@ -50,6 +50,9 @@ export default {
     methods: {
         handleClick() {
         },
+    },
+    mounted() {
+        console.log('Component mounted.')
     },
 };
 </script>
