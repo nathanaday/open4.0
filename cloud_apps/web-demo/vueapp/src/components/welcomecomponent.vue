@@ -19,14 +19,9 @@
                         Source
                         <img :src="githubLogo" alt="GitHub Logo" class="w-6 h-6 ml-2">
                     </button>
-                    <button
+                    <button @click="$router.push('/demo')"
                         class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                         Access demo
-                        <!-- <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg> -->
                         <img :src="mdiArrowRight" alt="Demo Logo" class="w-6 h-6 ml-2">
                     </button>
                 </div>
