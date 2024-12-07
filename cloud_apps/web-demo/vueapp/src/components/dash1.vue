@@ -5,12 +5,12 @@
         </div>
     </div>
     <div class="p-5 flex justify-center">
-        <div class="card shadow-lg" style="height: 75vh; width: 80vw;">
+        <div class="three-container-view card shadow-lg" style="height: 75vh; width: 80vw;">
             <PointView></PointView>
         </div>
     </div>
     <div class="p-2 flex justify-center">
-        <div class="card shadow-lg bg-base-100">
+        <div class="card shadow-lg bg-base-100" style="height: 25vh; width: 80vw;">
             <div class="py-4 px-4 mx-auto text-center lg:py-16">
                 Controls
                 
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-.card {
+.three-container-view {
   min-height: 500px; /* Example minimum height */
   min-width: 300px;;
 }
