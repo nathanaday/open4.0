@@ -5,8 +5,11 @@ import (
 	"opengo/actions"
 	"opengo/configuration"
 	"opengo/datapoints"
+	"opengo/image_processing"
 	"opengo/intakes"
 	"os"
+
+	"github.com/gin-gonic/gin"
 )
 
 type application struct {
@@ -30,10 +33,28 @@ func main() {
 	c := make(chan datapoints.DataPointId)
 
 	// (TODO) There may be some database initialization at this point
+	// ...
 
-	// (TODO) There may be some web server initialization at this point
+	// REST API router initialization
+	router := gin.Default()
+	imageGroup := router.Group("/images")
+	{
+		imageGroup.POST("/inspect", image_processing.InspectImageHandler)
+		imageGroup.POST("/analyze", image_processing.AnalyzeImageHandler)
+		imageGroup.GET("/analysis_status", image_processing.AnalysisStatusHandler)
+	}
 
-	// (TODO) There may ne some REST API router initialization at this point
+	// Model management routes
+	modelGroup := router.Group("/models")
+	{
+		modelGroup.GET("/manifest", image_processing.GetModelsManifestHandler)
+		modelGroup.POST("/download", image_processing.RequestDownloadModelHandler)
+		modelGroup.POST("/update", image_processing.RequestUpdateModelHandler)
+		modelGroup.POST("/remove", image_processing.RequestRemoveModelHandler)
+	}
+
+	// Run the server
+	go router.Run(":8080")
 
 	// Starting the data intake process
 	di := intakes.NewDataIntake(logger, &app.config.IntakeConfig, &app.datapoints, c)

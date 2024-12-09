@@ -161,4 +161,13 @@ cython_debug/
 
 *.DS_Store
 *.bak
+io/
+*.prototxt
+*.caffemodel
+*.pb
+*.pbtxt
+*.weights
+*.cfg
+*.xml
+*.yaml
 
