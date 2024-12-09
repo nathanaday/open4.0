@@ -159,11 +159,15 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
+models/
 *.DS_Store
 *.bak
 io/
+
 *.prototxt
+.prototxt
 *.caffemodel
+.caffemodel
 *.pb
 *.pbtxt
 *.weights
