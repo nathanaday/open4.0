@@ -10,6 +10,8 @@ The edge app executable is written in Golang. Using the dynamic web UI, users ca
 
 When running any model or analysis function, all availble insights are pooled into an 'insight pool'. The user can setup triggers to start actions based on the state of any one of the insights. For example, if the insight pool contains number of detected people in the image, the user can trigger an event when the number of people equals 0, then a different event when people detections exceed 10. 
 
+Event triggers include posting a message to an open socket, publishing to a cloud service (MQTT or HTTP), or saving image and video to the file system.
+
 ![image](https://github.com/user-attachments/assets/14ecb017-a792-400a-a1dc-e7c8062434ca)
 
 
